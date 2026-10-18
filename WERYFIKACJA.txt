@@ -1,0 +1,46 @@
+HUB DISCORD 1.0 — sprawdzenie lokalne, 18.10.2026
+
+Python: 3.12.14
+discord.py: 2.7.1
+
+Wykonane polecenia:
+python -m unittest discover -s tests -v
+  Wynik: 24 testy, 0 błędów, 0 niepowodzeń.
+python -m compileall -q main.py hub tests
+  Wynik: kod wyjścia 0.
+python -m pip check
+  Wynik: No broken requirements found.
+
+Potwierdzone lokalnie:
+- ograniczenia tożsamości kupującego i sprzedawcy;
+- zakup własnej oferty i zakup rekordu innego serwera są odrzucane;
+- dwa równoczesne kliknięcia Kup tworzą jedno zamówienie i jedno
+  wywołanie tworzenia prywatnego kanału (Discord API zastąpione w teście);
+- blokada opinii bez zatwierdzonego dowodu;
+- jedna opinia na zamówienie i aktualizacja średniej po edycji;
+- ochrona przed decyzją dotyczącą starej wersji dowodu;
+- brak zatwierdzania dowodu własnej transakcji;
+- negatywna opinia przy otwartym sporze;
+- ponowna weryfikacja po zmianie oficjalnej oferty;
+- blokada zamykania własnej transakcji przez personel w celu
+  uniemożliwienia wystawienia opinii;
+- kopia i ponowne otwarcie prawdziwej bazy SQLite;
+- serializacja 24 komend w rzeczywistej bibliotece discord.py;
+- trwałe identyfikatory przycisków i ich odtworzenie;
+- odmowa dostępu do cudzych zamówień i funkcji personelu;
+- brak treści prywatnego dowodu w karcie zamówienia;
+- konfiguracja uprawnień bota nie wymaga Administrator;
+- formularz produktu zgodny z limitem pięciu pól.
+
+Niezweryfikowane na żywo:
+- logowanie bota i instalacja na konkretnym serwerze;
+- utworzenie kanałów i ról przez prawdziwe Discord API;
+- faktyczna widoczność kanałów z różnych kont i istniejących ról;
+- pobieranie i wysyłanie plików do Discorda;
+- działanie na Bot-Hosting.net i zużycie RAM przy rzeczywistym ruchu;
+- nieprzerwana dostępność hostingu i jego panel mobilny.
+
+Brak tokenu i autoryzowanego serwera uniemożliwia test end-to-end.
+Lista prób do wykonania na serwerze testowym: PORADNIK.html, punkt 11.
+Przeglądarkowy podgląd HTML nie został uruchomiony: środowisko
+nie ma zainstalowanej przeglądarki Chromium dla Playwright.

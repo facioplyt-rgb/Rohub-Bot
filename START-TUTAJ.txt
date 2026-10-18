@@ -1,0 +1,20 @@
+1. Otwórz PORADNIK.html lub README.md.
+2. Utwórz aplikację i bota w https://discord.com/developers/applications
+3. Włącz Message Content Intent. Server Members i Presence pozostaw wyłączone.
+4. Dodaj bota do swojego serwera zgodnie z listą uprawnień w poradniku.
+5. Włącz Community / Społeczność na serwerze Discord.
+6. Na Bot-Hosting.net utwórz darmową aplikację Python 3.12.
+7. Wgraj i rozpakuj ZIP. main.py i requirements.txt muszą być w katalogu głównym.
+8. Ustaw plik startowy main.py. Zainstalowanie requirements.txt obsługuje hosting.
+9. Dodaj sekretną zmienną DISCORD_TOKEN i zmienną GUILD_ID. Uruchom aplikację.
+10. W konsoli szukaj HUB GOTOWY. Na Discordzie właściciel wpisuje /konfiguruj potwierdz:True.
+11. Ustaw rolę bota nad wszystkimi rolami Hub. Nadaj personel i sprzedawców przez /rola.
+12. Wykonaj testy z poradnika przed wpuszczeniem użytkowników.
+
+Token bota wpisujesz tylko w sekretach hostingu albo lokalnym .env.
+Nie wysyłaj go w rozmowie, wiadomości Discord ani na zrzucie ekranu.
+Nie usuwaj katalogu data przy aktualizacji.
+Darmowy hosting odnawiasz co 4 dni (według oferty sprawdzonej 18.10.2026).
+
+Paczka zawiera kod i instrukcję. Nie jest jeszcze połączona z Twoim kontem
+ani serwerem. Testy lokalne nie zastępują testu na prawdziwym Discordzie.
